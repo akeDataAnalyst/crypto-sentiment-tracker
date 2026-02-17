@@ -1,13 +1,13 @@
- # Crypto Market Sentiment Analyzer from News Feeds
+# Crypto Market Sentiment Analyzer from News Feeds
 
 ## **Description**  
-A Python tool that collects recent cryptocurrency news from public RSS feeds, applies VADER sentiment analysis to score daily market tone, and correlates sentiment with next-day price movements for BTC, ETH, and SOL.
+A Python tool that collects recent cryptocurrency news from **NewsData.io** (free tier) and public RSS feeds, applies VADER sentiment analysis to score daily market tone, and correlates sentiment with next-day price movements for BTC, ETH, and SOL.
 
 ## **Problem**  
 Cryptocurrency prices are highly sensitive to news, social hype, and media narratives. Without systematic quantification, it's challenging to distinguish noise from meaningful signals in a 24/7 global market.
 
 ## **Solution**  
-- Aggregated news articles from free RSS feeds (Cointelegraph, CoinDesk, CryptoSlate, CryptoPotato)  
+- Aggregated news articles from NewsData.io (free tier, keyword-targeted crypto news) and RSS feeds (Cointelegraph, CoinDesk, CryptoSlate, etc.)  
 - Used VADER NLP to compute compound sentiment scores (-1 very negative → +1 very positive) on titles, summaries, and content  
 - Aggregated to daily level (mean sentiment + article count)  
 - Merged with daily price data (Binance via CCXT / CoinGecko fallback)  
@@ -20,14 +20,14 @@ Cryptocurrency prices are highly sensitive to news, social hype, and media narra
 - Rising article volume (up to 52 articles on Feb 16) acted as a fear/discussion indicator during the correction
 
 ## **Technologies**  
-- Data collection: feedparser (RSS), python-dotenv (key management), requests  
+- Data collection: feedparser (RSS), requests + NewsData.io API, python-dotenv (key management)  
 - Sentiment analysis: vaderSentiment  
 - Processing & analysis: pandas, numpy  
 - Visualization: Plotly (interactive charts)  
 - Price data: ccxt (Binance), pycoingecko (fallback)
 
 ## **Files**  
-- `01_data_collection.ipynb` – RSS & price fetching  
+- `01_data_collection.ipynb` – NewsData.io + RSS + price fetching  
 - `02_sentiment_scoring.ipynb` – VADER scoring & aggregation  
 - `03_correlation_analysis.ipynb` – Merge, correlation, insights  
 - `daily_sentiment_vader.csv` – Daily sentiment scores  
@@ -37,7 +37,7 @@ Cryptocurrency prices are highly sensitive to news, social hype, and media narra
 - `app.py` – Streamlit dashboard
 
 ## **Dashboard**  
-An interactive Streamlit app shows:  
+Interactive Streamlit app showing:  
 - Sentiment vs next-day returns chart  
 - Daily sentiment trend  
 - Correlation table  
