@@ -1,7 +1,7 @@
 # Crypto Market Sentiment Analyzer from News Feeds
 
 ## **Description**  
-A Python tool that collects recent cryptocurrency news from **NewsData.io** (free tier) and public RSS feeds, applies VADER sentiment analysis to score daily market tone, and correlates sentiment with next-day price movements for BTC, ETH, and SOL.
+A Python tool that collects recent cryptocurrency news from NewsData.io (free tier) and public RSS feeds, applies VADER sentiment analysis to score daily market tone, and correlates sentiment with next-day price movements for BTC, ETH, and SOL.
 
 ## **Problem**  
 Cryptocurrency prices are highly sensitive to news, social hype, and media narratives. Without systematic quantification, it's challenging to distinguish noise from meaningful signals in a 24/7 global market.
