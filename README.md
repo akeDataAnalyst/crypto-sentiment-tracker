@@ -1,5 +1,7 @@
 # Crypto Market Sentiment Analyzer from News Feeds
 
+[![Live Demo](https://img.shields.io/badge/Streamlit-Live%20Demo-brightgreen)](https://crypto-sentiment-tracker-edakol9pvdsi99xu4w9ovy.streamlit.app/)
+
 ## **Description**  
 A Python tool that collects recent cryptocurrency news from NewsData.io (free tier) and public RSS feeds, applies VADER sentiment analysis to score daily market tone, and correlates sentiment with next-day price movements for BTC, ETH, and SOL.
 
